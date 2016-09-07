@@ -51,7 +51,7 @@ function (
             },
             hOSM: {
                 name: 'Humanitarian',
-                url: 'http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
+                url: 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
                 type: 'xyz',
                 layerOptions: {
                     attribution: 'Map data &copy; <a href="http://osm.org/copyright">OpenStreetMap</a>, Tiles <a href="http://hot.openstreetmap.org/">Humanitarian OpenStreetMap Team</a>'
