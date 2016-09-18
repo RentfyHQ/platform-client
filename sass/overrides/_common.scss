@@ -1,0 +1,114 @@
+.main-menu_wrapper {
+
+}
+.main-menu {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    float: right;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 16px;
+}
+
+.main-menu li {
+  display: inline;
+}
+
+.main-menu li a {
+  color: white;
+}
+
+.main-menu li a .avatar {
+  max-width:100% !important;
+  width: 32px;
+  height:auto;
+  display: inline;
+}
+
+.form-field-checkbox {
+  text-align: left !important;
+}
+
+fieldset legend.form-field-legend {
+  margin-bottom: 4px !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+fieldset .form-field-toggle, .form-fieldgroup .form-field-toggle {
+  color: white !important;
+}
+fieldset .form-field-toggle svg.iconic, .form-fieldgroup .form-field-toggle svg.iconic {
+  fill: white !important;
+}
+.form-field-checkbox.checkbox label, .form-field-checkbox.radio label{
+  color: white !important;
+}
+
+.form-field.date {
+  margin-top: 0 !important;
+}
+
+.form-field.place {
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+}
+
+fieldset, fieldset:last-child {
+  margin-bottom: 8px !important;
+}
+@media screen and (min-width: 64em) {
+    /* line 48, /Users/robbie/devel/Lamu/platform-pattern-library/assets/sass/5_layouts/_layout-general.scss */
+    [class*="layout-"] .mode-context {
+        left: 0 !important;
+        width: 224px;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    /* line 86, /Users/robbie/devel/Lamu/platform-pattern-library/assets/sass/5_layouts/_layout-general.scss */
+    [class*="layout-"] .message {
+        left: 224px !important;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    /* line 133, /Users/robbie/devel/Lamu/platform-pattern-library/assets/sass/5_layouts/_layout-general.scss */
+    [class*="layout-"] [role="main"] {
+        padding-top: 68px;
+        padding-left: 224px !important;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    /* line 151, /Users/robbie/devel/Lamu/platform-pattern-library/assets/sass/5_layouts/_layout-general.scss */
+    [class*="layout-"] [role="main"] .toolbar {
+        left: 224px !important;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    /* line 207, /Users/robbie/devel/Lamu/platform-pattern-library/assets/sass/5_layouts/_layout-general.scss */
+    [class*="layout-"] [role="main"] .listing .listing-toolbar {
+        left: 224px !important;
+    }
+    /* line 222, /Users/robbie/devel/Lamu/platform-pattern-library/assets/sass/5_layouts/_layout-general.scss */
+    [class*="layout-"] [role="main"] .listing .listing-toolbar .listing-toolbar-actions .dropdown-menu {
+        margin-left: -224px !important;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    /* line 257, /Users/robbie/devel/Lamu/platform-pattern-library/assets/sass/5_layouts/_layout-general.scss */
+    [class*="layout-"] [role="main"] .map.full-size {
+        left: 224px !important;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    /* line 350, /Users/robbie/devel/Lamu/platform-pattern-library/assets/sass/5_layouts/_layout-general.scss */
+    [class*="layout-"] [role="main"]>.loading {
+        left: 224px !important;
+    }
+}

@@ -9,7 +9,9 @@ function PostToolbarDirective() {
     };
 }
 
-PostToolbarController.$inject = [];
-function PostToolbarController() {
+PostToolbarController.$inject = ['$scope', '$rootScope'];
+function PostToolbarController($scope, $rootScope) {
+
+  $scope.currentUser = $rootScope.currentUser;
 
 }

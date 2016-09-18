@@ -1,7 +1,7 @@
-<fieldset ng-show="categories.length" overflow-toggle has-overflow="categories.length > 2" ng-model-options="{ updateOn: 'default' }">
-    <legend translate="nav.categories">Categories</legend>
+<fieldset  ng-show="categories.length" overflow-toggle has-overflow="categories.length > 2" ng-model-options="{ updateOn: 'default' }">
+    <legend class="form-field-legend" translate="nav.categories">Categories</legend>
 
-    <div class="form-field checkbox" ng-repeat="(index, category) in categories" ng-class="{ overflow : ($index > 1) }">
+    <div class="form-field checkbox form-field-checkbox" ng-repeat="(index, category) in categories" ng-class="{ overflow : ($index > 1) }">
         <label>
             <input checklist-value="category.id" checklist-model="selectedCategories" type="checkbox" name="selectedCategories"> {{ ::category.tag }}
         </label>

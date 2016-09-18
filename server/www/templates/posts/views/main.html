@@ -1,5 +1,5 @@
 <div>
-    <layout-class layout="a"></layout-class>
+    <layout-class layout="b"></layout-class>
     <div class="mode-context init" ng-controller="navigation as nav" dropdown>
         <header class="mode-context-header" ng-class="{ 'has-logo' : nav.site.image_header }">
             <h1 class="mode-context-title"><a href="/" ng-bind="nav.site.name"></a></h1>
@@ -15,13 +15,18 @@
 
         <div class="mode-context-body">
             <p ng-bind="nav.site.description"></p>
+            <form name="postFiltersForm" ng-submit="applyFilters()" ng-model-options="{ updateOn : 'submit' }">
+              <filter-category ng-model="filters.tags"></filter-category>
+              <filter-status ng-model="filters.status"></filter-status>
 
-            <mode-context-form-filter></mode-context-form-filter>
+              <filter-date created-after-model="filters.created_after" created-before-model="filters.created_before"></filter-date>
 
-            <post-active-filters></post-active-filters>
-
-            <saved-search-create></saved-search-create>
-
+              <filter-location center-point-model="filters.center_point" within-km-model="filters.within_km"></filter-location>
+              <div class="form-field">
+                  <button type="button" class="button-link" ng-click="cancel()" translate>app.cancel</button>
+                  <button type="submit" class="button-alpha" translate>app.apply_filters</button>
+              </div>
+            </form>
         </div>
     </div>
 

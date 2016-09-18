@@ -805,6 +805,7 @@
         "save_profile" : "Save Profile",
         "cancel" : "Cancel",
         "email" : "Email Address",
+        "phone" : "Phone Number",
         "failed_attempts" : "Failed attempts: ",
         "full_name" : "Display Name",
         "never" : "Never",

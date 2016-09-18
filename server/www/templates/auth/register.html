@@ -37,6 +37,22 @@
                 <span translate="{{'user.valid.email.' + error}}" translate-default="{{error}}"></span>
             </div>
         </div>
+        <div class="form-field" ng-class="{ 'success': !form.number.$invalid && form.number.$dirty, 'error' : form.number.$invalid && form.number.$dirty}">
+            <label for="number" class="input-label" translate>user.phone</label>
+            <input type="number" id="number" name="number"
+                ng-model="number"
+                ng-disabled="processing"
+                ng-maxlength="150"
+                required>
+            <div ng-repeat="(error, value) in form.number.$error"
+                ng-show="form.number.$dirty"
+                class="alert error">
+                <svg class="iconic">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../../img/iconic-sprite.svg#warning"></use>
+                </svg>
+                <span translate="{{'user.valid.number.' + error}}" translate-default="{{error}}"></span>
+            </div>
+        </div>
         <div class="form-field" ng-class="{ 'success': !form.password.$invalid && form.password.$dirty, 'error' : form.password.$invalid && form.password.$dirty}">
             <label class="input-label" for="password" translate>user.password</label>
             <input id="password" type="password" name="password"

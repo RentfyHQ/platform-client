@@ -1,4 +1,4 @@
-<form name="postFiltersForm" role="search" class="searchbar" dropdown auto-close="outsideClick" ng-submit="applyFilters()" ng-model-options="{ updateOn : 'submit' }">
+<form name="`postFiltersForm`" role="search" class="searchbar" dropdown auto-close="outsideClick" ng-submit="applyFilters()" ng-model-options="{ updateOn : 'submit' }">
     <!-- Include search bar -->
     <filter-searchbar model="filters.q"></filter-searchbar>
 
@@ -11,12 +11,12 @@
             <span class="button-label hidden" translate>app.saved</span>
         </a>
 
-        <a id="togglePostSearchFilters" class="button searchbar-options-filter" data-toggle="search-filters" ng-click="toggleFilters()" ng-class="{ 'active': searchFiltersToggle }">
+        <!-- <a id="togglePostSearchFilters" class="button searchbar-options-filter" data-toggle="search-filters" ng-click="toggleFilters()" ng-class="{ 'active': searchFiltersToggle }">
             <span class="button-label" translate>app.filters</span>
             <svg class="iconic">
                 <use xlink:href="../../img/iconic-sprite.svg#chevron-bottom"></use>
             </svg>
-        </a>
+        </a> -->
     </div>
 
     <saved-search-listing></saved-search-listing>

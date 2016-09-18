@@ -1,7 +1,7 @@
 <fieldset overflow-toggle has-overflow="statuses.length > 2" ng-model-options="{ updateOn: 'default' }" ng-show="hasPermission('Manage Posts')">
-    <legend translate="global_filter.status">Status</legend>
+    <legend class="form-field-legend" translate="global_filter.status">Status</legend>
 
-    <div class="form-field checkbox icon-input" ng-repeat="(index, status) in statuses" ng-class="{ overflow: ($index > 1) }">
+    <div class="form-field checkbox icon-input form-field-checkbox" ng-repeat="(index, status) in statuses" ng-class="{ overflow: ($index > 1) }">
 
       <label>
         <svg class="iconic" ng-if="status == 'published'">
@@ -18,7 +18,7 @@
         <span translate="post.published" ng-if="status == 'published'">Published</span>
         <span translate="post.draft" ng-if="status == 'draft'">Under review</span>
         <span translate="post.archived" ng-if="status == 'archived'">Archive</span>
-        
+
         </label>
     </div>
 
