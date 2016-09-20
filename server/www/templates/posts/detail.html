@@ -28,7 +28,7 @@
 </div>
 
 <main role="main">
-  <div class="main-col">
+  <div class="main-col post-main-col">
     <article class="postcard" role="article">
       <div class="post-band" style="background-color: {{form.color}};"></div>
 
@@ -55,51 +55,57 @@
 
         <post-actions post="post"></post-actions>
 
-        <div
-          ng-repeat="(key,value) in post.values"
-          ng-if="isPostValue(key) && form_attributes[key] && showType(form_attributes[key].type)"
-          class="postcard-field"
-          >
+        <div class="post-view-row">
+          <div class="post-view-col">
+            <div
+              ng-repeat="(key,value) in post.values"
+              ng-if="isPostValue(key) && form_attributes[key] && showType(form_attributes[key].type)"
+              class="postcard-field"
+              >
 
-          <post-media-value
-            ng-if="form_attributes[key].type === 'media'"
-            label="{{form_attributes[key].label}}"
-            media-id="value"></post-media-value>
-        </div>
-        <div
-          ng-if="post.content"
-          class="postcard-field">
-          <p sd-model-to-html="post.content"></p>
-        </div>
-
-        <div
-          ng-if="!!post.tags.length"
-          class="postcard-field"
-          >
-          <h2 class="form-label" translate>post.modify.form.categories</h2>
-          <p ng-repeat="category in post.tags">
-            {{category.tag}}
-          </p>
-        </div>
-
-        <post-value
-          ng-repeat="(key,value) in post.values"
-          ng-if="isPostValue(key) && showType(form_attributes[key].type)"
-          key="key"
-          value="value"
-          attribute="form_attributes[key]"
-          type="'post'"
-          ng-if="form_attributes[key].type !== 'media'">
-        </post-value>
-        <div
-            ng-if="mapDataLoaded"
-            class="postcard-field"
-            >
-            <h2 ng-if="mapDataLoaded" class="form-label" translate>post.location</h2>
-            <p></p>
-            <div ng-if="mapDataLoaded">
-              <leaflet id="post-map" class="map" defaults="defaults" geojson="geojson" center="center" layers="layers"></leaflet>
+              <post-media-value
+                ng-if="form_attributes[key].type === 'media'"
+                label="{{form_attributes[key].label}}"
+                media-id="value"></post-media-value>
             </div>
+            <div
+              ng-if="post.content"
+              class="postcard-field">
+              <p sd-model-to-html="post.content"></p>
+            </div>
+
+            <div
+              ng-if="!!post.tags.length"
+              class="postcard-field"
+              >
+              <h2 class="form-label" translate>post.modify.form.categories</h2>
+              <p ng-repeat="category in post.tags">
+                {{category.tag}}
+              </p>
+            </div>
+
+            <post-value
+              ng-repeat="(key,value) in post.values"
+              ng-if="isPostValue(key) && showType(form_attributes[key].type)"
+              key="key"
+              value="value"
+              attribute="form_attributes[key]"
+              type="'post'"
+              ng-if="form_attributes[key].type !== 'media'">
+            </post-value>
+          </div>
+          <div class="post-view-col">
+            <div
+                ng-if="mapDataLoaded"
+                class="postcard-field"
+                >
+                <h2 ng-if="mapDataLoaded" class="form-label" translate>post.location</h2>
+                <p></p>
+                <div ng-if="mapDataLoaded">
+                  <leaflet id="post-map" class="map" defaults="defaults" geojson="geojson" center="center" layers="layers"></leaflet>
+                </div>
+            </div>
+          </div>
         </div>
       </div>
     </article>
